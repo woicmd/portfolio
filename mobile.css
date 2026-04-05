@@ -1,0 +1,251 @@
+/* ─────────────────────────────────────────────────────────
+   HAMBURGER NAV (hidden on desktop, visible on mobile)
+───────────────────────────────────────────────────────── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 20px;
+  height: 1.5px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 999;
+  padding: 2rem 1.5rem;
+  flex-direction: column;
+}
+
+.nav-overlay.is-open {
+  display: flex;
+}
+
+.nav-overlay-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-overlay-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.nav-close {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-overlay-link {
+  font-family: 'DM Mono', monospace;
+  font-size: 22px;
+  color: var(--text);
+  padding: 14px 0;
+  border-bottom: 0.5px solid var(--border);
+  display: block;
+}
+
+.nav-overlay-badge {
+  display: inline-block;
+  margin-top: 24px;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--green-text);
+  background: var(--green-bg);
+  border: 0.5px solid var(--green-border);
+  padding: 4px 12px;
+  border-radius: var(--radius-md);
+}
+
+/* ── ABSTRACT TOGGLE ── */
+.abstract-wrap {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.abstract-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  color: var(--info);
+  cursor: pointer;
+  padding: 0;
+  margin-top: 6px;
+}
+
+/* ── PROJECTS DOTS ── */
+.projects-dots {
+  display: none;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.projects-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--border-md);
+  transition: background 0.2s;
+}
+
+.projects-dot.active {
+  background: var(--text);
+}
+
+/* ─────────────────────────────────────────────────────────
+   TABLET (≤ 760px)
+───────────────────────────────────────────────────────── */
+@media (max-width: 760px) {
+  .project-card {
+    min-width: calc(80vw);
+    max-width: calc(80vw);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   MOBILE (≤ 640px)
+───────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .container { padding: 1.25rem 1rem 0; }
+  .section { margin: 2.5rem 0; }
+
+  /* nav */
+  .nav { margin-bottom: 2rem; gap: 0; justify-content: space-between; }
+  .nav-link, .open-badge { display: none; }
+  .nav-hamburger { display: flex; }
+
+  /* hero */
+  .hero-role { font-size: 11px; }
+  .hero-tagline { font-size: 14px; max-width: 100%; }
+  .btn { font-size: 12px; padding: 7px 13px; }
+  .btn-group { gap: 6px; }
+
+  /* research title row */
+  .research-title-row { grid-template-columns: 1fr; }
+  .research-title-row .exp-period { display: none; }
+
+  /* abstract collapse */
+  .abstract-wrap .research-abstract {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .abstract-wrap.is-open .research-abstract {
+    display: block;
+    overflow: visible;
+  }
+  .abstract-toggle { display: inline-block; }
+
+  /* chart */
+  #ohlcChart { height: 160px; }
+  .chart-annotation { font-size: 10px; text-align: left; padding: 6px 12px 10px; }
+
+  /* metrics: horizontal scroll */
+  .metrics-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 8px;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    margin-bottom: 1.25rem;
+  }
+  .metrics-row::-webkit-scrollbar { display: none; }
+  .metric { flex-shrink: 0; min-width: 110px; }
+
+  /* methodology: numbered vertical */
+  .method-flow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    counter-reset: step;
+    margin-bottom: 1rem;
+  }
+  .marrow { display: none; }
+  .mstep {
+    counter-increment: step;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 0.5px solid var(--border);
+    border-radius: 0;
+    padding: 9px 0;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+  .mstep:last-child { border-bottom: none; }
+  .mstep::before {
+    content: "0" counter(step);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--text-tertiary);
+    min-width: 18px;
+    flex-shrink: 0;
+  }
+
+  /* skills */
+  .skill-row { grid-template-columns: 90px 1fr; }
+  .skill-cat { font-size: 10px; padding: 10px 12px; }
+  .skill-items { font-size: 13px; padding: 10px 12px; }
+
+  /* projects */
+  .projects-nav { display: none; }
+  .projects-dots { display: flex; }
+  .project-card {
+    min-width: calc(100vw - 2rem - 10px);
+    max-width: calc(100vw - 2rem - 10px);
+    scroll-snap-align: center;
+  }
+
+  /* experience */
+  .exp-role { font-size: 14px; }
+  .exp-org { font-size: 12px; }
+  .exp-detail { font-size: 12px; }
+  .exp-period { font-size: 10px; }
+
+  /* credentials */
+  .cred-item { font-size: 12px; padding: 4px 10px; }
+
+  /* footer */
+  .footer { flex-direction: row; justify-content: space-between; align-items: center; padding-bottom: 2rem; }
+}
+
+/* ─────────────────────────────────────────────────────────
+   VERY SMALL (≤ 400px)
+───────────────────────────────────────────────────────── */
+@media (max-width: 400px) {
+  .hero-name { font-size: 32px; }
+  .research-title { font-size: 18px; }
+  .badge { font-size: 10px; padding: 2px 6px; }
+  .btn { font-size: 11px; padding: 6px 11px; }
+  .btn-break { display: block; flex-basis: 100%; height: 0; }
+  .exp-item { grid-template-columns: 1fr; }
+  .exp-period { text-align: left; }
+  .cred-row { grid-template-columns: 1fr; }
+  .cred-row .exp-period { text-align: left; }
+}

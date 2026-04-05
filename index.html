@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Ridhwan Hakiki — Data Scientist & Researcher</title>
+  <!-- Prevent Search Engines from indexing this CV -->
+  <meta name="robots" content="noindex, nofollow">
+  <!-- Open Graph for nice display when sharing link via Whatsapp/LinkedIn DM -->
+  <meta property="og:title" content="Muhammad Ridhwan Hakiki — Data Scientist">
+  <meta property="og:description"
+    content="Recent graduate with hands-on project experience spanning data science research, RESTful API development, and Google Cloud infrastructure.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- ── NAV ─────────────────────────────────────────── -->
+    <nav class="nav">
+      <span class="nav-brand">mrh.</span>
+      <a class="nav-link" href="#research">research</a>
+      <a class="nav-link" href="#projects">projects</a>
+      <a class="nav-link" href="#experience">experience</a>
+      <a class="nav-link" href="#credentials">credentials</a>
+      <span class="open-badge">open to work</span>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- ── MOBILE NAV OVERLAY ───────────────────────────── -->
+    <div class="nav-overlay" id="navOverlay">
+      <div class="nav-overlay-inner">
+        <div class="nav-overlay-top">
+          <span class="nav-brand">mrh.</span>
+          <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
+        </div>
+        <a class="nav-overlay-link" href="#research">research</a>
+        <a class="nav-overlay-link" href="#projects">projects</a>
+        <a class="nav-overlay-link" href="#experience">experience</a>
+        <a class="nav-overlay-link" href="#credentials">credentials</a>
+        <span class="nav-overlay-badge">open to work</span>
+      </div>
+    </div>
+
+    <!-- ── HERO ──────────────────────────────────────────── -->
+    <section id="hero" class="section" style="margin-top:0">
+      <p class="hero-role">Data · Research · Cloud</p>
+      <h1 class="hero-name">Muhammad<br>Ridhwan Hakiki</h1>
+      <p class="hero-tagline">
+        Recent graduate with hands-on project experience spanning data science research,
+        RESTful API development, and Google Cloud infrastructure. Actively seeking early-career
+        opportunities to grow and contribute to impactful tech teams. <br> B.S. in Informatics · Universitas Amikom
+        Yogyakarta <br> GPA 3.82 ·
+        2026
+      </p>
+      <div class="btn-group">
+        <a class="btn btn-primary" href="#research"><svg class="btn-icon" viewBox="0 0 16 16" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 14h12V2H2v12z" />
+            <path d="M5 11V8" />
+            <path d="M8 11V5" />
+            <path d="M11 11v-2" />
+          </svg>View Research</a>
+        <div class="btn-break"></div>
+        <a class="btn" href="https://github.com/woicmd" target="_blank" rel="noopener"><svg class="btn-icon"
+            viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+          </svg>GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/mrhakiki" target="_blank" rel="noopener"><svg class="btn-icon"
+            viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M14.82 0H1.18A1.16 1.16 0 000 1.15v13.7A1.16 1.16 0 001.18 16h13.64A1.16 1.16 0 0016 14.85V1.15A1.16 1.16 0 0014.82 0zM4.74 13.68H2.46V6h2.28v7.68zm-1.14-8.73A1.32 1.32 0 114.92 3.6a1.32 1.32 0 01-2.64 1.35zm9.93 8.73h-2.28V9.93c0-.89-.02-2.04-1.24-2.04-1.25 0-1.44.98-1.44 1.98v3.8H6.28V6h2.19v1.05h.03c.3-.58 1.05-1.19 2.17-1.19 2.32 0 2.75 1.53 2.75 3.51v4.31z" />
+          </svg>LinkedIn</a>
+        <!-- CV Temporarily Locked -->
+        <span class="btn btn--private">
+          <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M4 5V4a4 4 0 118 0v1h1a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1h1zm2-1v1h4V4a2 2 0 10-4 0zm2 8a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+          </svg>Download CV
+        </span>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── RESEARCH ──────────────────────────────────────── -->
+    <section id="research" class="section">
+      <p class="section-label">Research</p>
+      <div class="research-title-row">
+        <h2 class="research-title">
+          Integrating Whale Transaction Flow Scoring with LSTM for Bitcoin Trend Forecasting
+        </h2>
+        <span class="exp-period">2025 – 2026</span>
+      </div>
+      <div class="research-meta">
+        <span class="badge badge-amber">Jurnal Teknik Informatika (JUTIF) · SINTA 2</span>
+        <span class="badge badge-blue">Corresponding & First Author</span>
+        <span class="badge badge-green">Accepted</span>
+      </div>
+      <div class="abstract-wrap">
+        <p class="research-abstract">
+          Develops a two-layer LSTM model that fuses whale transaction
+          sentiment scores with historical OHLC prices to forecast 7-day Bitcoin movements.
+          Trained on 2,069 whale transactions and 8,761 hourly observations (Apr 2024 – Apr 2025),
+          the model achieved R² 0.9386 and successfully captured directional trends, demonstrating
+          that on-chain whale activity provides complementary predictive value beyond conventional
+          price-volume indicators.
+        </p>
+        <button class="abstract-toggle" id="abstractToggle">show more ↓</button>
+      </div>
+
+      <!-- Chart -->
+      <div class="chart-wrap">
+        <div class="chart-header">
+          <span class="chart-label">BTC/USD · Daily · Apr 20–27, 2025</span>
+          <div class="legend-row">
+            <div class="legend-item">
+              <div class="legend-swatch" style="background:var(--bull)"></div>
+              Actual
+            </div>
+            <div class="legend-item">
+              <div class="legend-swatch" style="background:var(--amber);opacity:.8"></div>
+              Forecast
+            </div>
+          </div>
+        </div>
+        <canvas id="ohlcChart"></canvas>
+        <p class="chart-annotation">
+          Actual captured +10.7% surge (Apr 22) · Forecast tracked trend with conservative amplitude
+        </p>
+      </div>
+
+      <!-- Metrics -->
+      <div class="metrics-row">
+        <div class="metric">
+          <p class="metric-label">actual range</p>
+          <!-- actual low 83,954 → actual high 95,924 -->
+          <p class="metric-value">$11.97K</p>
+          <p class="metric-sub">83.95K → 95.92K</p>
+        </div>
+        <div class="metric">
+          <p class="metric-label">forecast range</p>
+          <p class="metric-value">$6.20K</p>
+          <p class="metric-sub">87.00K → 93.26K</p>
+        </div>
+        <div class="metric">
+          <p class="metric-label">MAPE</p>
+          <p class="metric-value">2.38%</p>
+          <p class="metric-sub">7-day horizon</p>
+        </div>
+      </div>
+
+      <!-- Methodology -->
+      <p class="section-label">Methodology</p>
+      <div class="method-flow">
+        <span class="mstep">On-chain data</span>
+        <span class="marrow">→</span>
+        <span class="mstep">Whale scoring</span>
+        <span class="marrow">→</span>
+        <span class="mstep">Feature engineering</span>
+        <span class="marrow">→</span>
+        <span class="mstep">2 Layer LSTM</span>
+        <span class="marrow">→</span>
+        <span class="mstep">BTC trend forecast</span>
+      </div>
+
+      <div class="loa-row">
+        <div class="status-dot"></div>
+        <div class="loa-content">
+          <span class="loa-text">Production · Jurnal Teknik Informatika (JUTIF) · SINTA 2</span>
+          <!-- Replace with actual LoA link -->
+          <a class="loa-link" href="https://drive.google.com/file/d/1-eo6FQ-iFSSSMNI6TeD_H4ifrWHzA24R/view"
+            target="_blank" rel="noopener">View LoA →</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── SKILLS ────────────────────────────────────────── -->
+    <section id="skills" class="section">
+      <p class="section-label">Skills</p>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <div class="skill-cat">ML / AI</div>
+          <div class="skill-items">TensorFlow, scikit-learn, Pandas, NumPy, Matplotlib, Seaborn</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-cat">Languages</div>
+          <div class="skill-items">SQL, Python, JavaScript, C++, C#</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-cat">Cloud</div>
+          <div class="skill-items">Docker, App Engine, Cloud SQL, Cloud Storage</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-cat">Web</div>
+          <div class="skill-items">FastAPI, Node.js, React</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── PROJECTS ──────────────────────────────────────── -->
+    <section id="projects" class="section">
+      <div class="projects-header">
+        <p class="section-label">Projects</p>
+        <div class="projects-nav">
+          <button class="projects-arrow projects-arrow--left" id="projLeft" aria-label="Scroll left">←</button>
+          <button class="projects-arrow projects-arrow--right" id="projRight" aria-label="Scroll right">→</button>
+        </div>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card">
+          <p class="project-name">Punk Platform</p>
+          <p class="project-desc">
+            Academic support service for data science and tech assignments,
+            combining mentoring with deliverable-based solutions.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">React</span>
+          </div>
+          <div class="card-links">
+            <!-- Replace href with actual links -->
+            <a class="card-link" href="https://github.com/GithubHakiki/punkjoki.git"><svg class="icon-gh"
+                viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+              </svg>GitHub</a>
+            <a class="card-link" href="https://www.punkreas.fun"><svg class="icon-ext" viewBox="0 0 16 16" fill="none"
+                stroke="currentColor" stroke-width="1.5">
+                <path d="M6 2H3a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1v-3M10 2h4v4M7 9l7-7" />
+              </svg>Website</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-name">Captr</p>
+          <p class="project-desc">
+            AI-powered video downloader with browser extension and chat interface,
+            using LLM orchestration to extract and convert streams from 3000+ sites.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">Groq API</span>
+            <span class="tech-tag">yt-dlp</span>
+            <span class="tech-tag">ffmpeg</span>
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Chrome MV3</span>
+          </div>
+          <div class="card-links">
+            <span class="card-link card-link--private"><svg class="icon-lock" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M4 5V4a4 4 0 118 0v1h1a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1h1zm2-1v1h4V4a2 2 0 10-4 0zm2 8a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+              </svg>Closed Source</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-name">Dermatologist Care API</p>
+          <p class="project-desc">
+            Backend API for a dermatology application, handling user authentication, OTP verification, and article
+            management, with cloud deployment on Google Cloud Platform.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">RestAPI</span>
+            <span class="tech-tag">App Engine</span>
+            <span class="tech-tag">Cloud Storage</span>
+            <span class="tech-tag">Cloud SQL</span>
+            <span class="tech-tag">SendGrid</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link" href="https://github.com/Capstone-C-Derm"><svg class="icon-gh" viewBox="0 0 16 16"
+                fill="currentColor">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+              </svg>GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-name">Auto Perfect Fishing - Roblox "Fish It"</p>
+          <p class="project-desc">
+            AutoHotkey-based macro that automates fishing in Roblox
+            by simulating human-like input using pixel/color detection and randomized behavior.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">AutoHotKey</span>
+            <span class="tech-tag">Pixel Color Detection</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link" href="https://github.com/woicmd/auto-perfect-fishit.git"><svg class="icon-gh"
+                viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+              </svg>GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <p class="project-name">IG Follower Compare</p>
+          <p class="project-desc">
+            Chrome extension for analyzing Instagram follower relationships
+            by comparing following vs followers and categorizing them into mutuals, non-followbacks, and fans.
+          </p>
+          <div class="tech-row">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Chrome Extension</span>
+            <span class="tech-tag">Fetch API (Instagram API)</span>
+            <span class="tech-tag">Local storage</span>
+          </div>
+          <div class="card-links">
+            <a class="card-link" href="https://github.com/woicmd/ig-fol-compare.git"><svg class="icon-gh"
+                viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
+              </svg>GitHub</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="projects-dots" id="projectsDots"></div>
+    </section>
+
+    <script>
+      (function () {
+        const grid = document.getElementById('projectsGrid');
+        const left = document.getElementById('projLeft');
+        const right = document.getElementById('projRight');
+        if (!grid || !left || !right) return;
+
+        function getCardWidth() {
+          const card = grid.querySelector('.project-card');
+          return card ? card.offsetWidth + 10 : 300;
+        }
+
+        function updateArrows() {
+          left.style.opacity = grid.scrollLeft <= 5 ? '0.25' : '1';
+          left.style.pointerEvents = grid.scrollLeft <= 5 ? 'none' : 'auto';
+          const atEnd = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 5;
+          right.style.opacity = atEnd ? '0.25' : '1';
+          right.style.pointerEvents = atEnd ? 'none' : 'auto';
+        }
+
+        left.addEventListener('click', () => grid.scrollBy({ left: -getCardWidth(), behavior: 'smooth' }));
+        right.addEventListener('click', () => grid.scrollBy({ left: getCardWidth(), behavior: 'smooth' }));
+        grid.addEventListener('scroll', updateArrows);
+        updateArrows();
+      })();
+    </script>
+
+    <hr class="divider">
+
+    <!-- ── EXPERIENCE ────────────────────────────────────── -->
+    <section id="experience" class="section">
+      <p class="section-label">Experience</p>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-content">
+            <p class="exp-role">Laboratory Assistant</p>
+            <p class="exp-org">Universitas Amikom Yogyakarta</p>
+            <p class="exp-detail">
+              (1) <a href="https://drive.google.com/file/d/1-mOyrBgT0R-EaGLzZXvLUyFtBg6oQ2VT/view" target="_blank"
+                rel="noopener">Big Data &amp; Predictive Analytics ↗</a>,
+              (2) <a href="https://drive.google.com/file/d/1B58RfiLOxNn9uDV_yNPBelUAiBUSrZ4a/view" target="_blank"
+                rel="noopener">Data Structures (C++) ↗</a>,
+              (3) <a href="https://drive.google.com/file/d/1shc4T83aOV-a2TY6TZHZKehkS4TFhjYg/view" target="_blank"
+                rel="noopener">Advanced Programming (C#) ↗</a>,
+              (4) <a href="https://drive.google.com/file/d/1zSK0DchTDq06a9xSCYFuNbNe06ShDJlg/view" target="_blank"
+                rel="noopener">Database Design (SQL) ↗</a>,
+              (5) <a href="https://drive.google.com/file/d/1uiBOGQhH_6ogRcXw0nmxTjOupcw-9piG/view" target="_blank"
+                rel="noopener">Web Programming ↗</a> <br>
+              30–50 students per course.
+            </p>
+          </div>
+          <p class="exp-period">2024 – 2025</p>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-content">
+            <p class="exp-role">Cloud Computing Cohort</p>
+            <p class="exp-org"><a href="https://drive.google.com/drive/folders/12nngH32DKzbxxYwl-mo_M4zPKmB9s3Jl"
+                target="_blank" rel="noopener">Bangkit 2024 Batch 2 ↗</a></p>
+            <p class="exp-detail">
+              GCP-focused program. Backend &amp; cloud lead in capstone project. <br> Final Score: 89.70/100.
+            </p>
+          </div>
+          <p class="exp-period">2024</p>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── CREDENTIALS ───────────────────────────────────── -->
+    <section id="credentials" class="section">
+      <p class="section-label">Credentials</p>
+
+      <div class="cred-group">
+        <p class="cred-group-title">cloud &amp; networking</p>
+        <div class="cred-items">
+          <!-- Replace href with actual certificate links -->
+          <a class="cred-item" href="https://www.credly.com/badges/c3af93ea-fddc-40f6-a88c-1b75a75b66f7" target="_blank"
+            rel="noopener">Google Cloud Computing Foundations Certificate ↗</a>
+          <a class="cred-item" href="https://www.credly.com/badges/85012b7c-2144-4a0c-b48a-868e9f80415b" target="_blank"
+            rel="noopener">CCNA: Introduction to Networks ↗</a>
+        </div>
+      </div>
+
+      <div class="cred-group">
+        <p class="cred-group-title">data &amp; machine learning</p>
+        <div class="cred-items">
+          <!-- Replace href with actual certificate links -->
+          <a class="cred-item" href="https://drive.google.com/file/d/1a6iLVQubWqJLFucpZQ5xJsLrdh59n19l/view"
+            target="_blank" rel="noopener">Hacktiv8 - Code Generations and Optimization ↗</a>
+          <a class="cred-item" href="https://drive.google.com/file/d/1zjGp-eeYvOMoFA-M0j_6fF1sACKmGwfW/view"
+            target="_blank" rel="noopener">Hacktiv8 - LLM-Based Tools and Gemini API Integration for Data Scientists
+            ↗</a>
+          <a class="cred-item" href="https://www.dicoding.com/certificates/MRZMYJO7KZYQ" target="_blank"
+            rel="noopener">Dicoding
+            - Belajar Dasar AI ↗</a>
+        </div>
+      </div>
+
+      <div class="cred-group">
+        <p class="cred-group-title">software engineering</p>
+        <div class="cred-items">
+          <a class="cred-item" href="https://www.dicoding.com/certificates/2VX34QY3VZYQ" target="_blank"
+            rel="noopener">Dicoding
+            - Belajar Penerapan Machine Learning dengan Google Cloud ↗</a>
+          <a class="cred-item" href="https://www.dicoding.com/certificates/98XW5JR5JPM3" target="_blank"
+            rel="noopener">Dicoding
+            - Menjadi Google Cloud Engineer ↗</a>
+          <a class="cred-item" href="https://www.dicoding.com/certificates/6RPNYOV44Z2M" target="_blank"
+            rel="noopener">Dicoding
+            - Belajar Membuat Aplikasi Back-End untuk Pemula dengan Google Cloud ↗</a>
+          <a class="cred-item" href="https://www.dicoding.com/certificates/JMZV4VE9RXN9" target="_blank"
+            rel="noopener">Dicoding
+            - Belajar Dasar Pemrograman JavaScript ↗</a>
+          <a class="cred-item" href="https://www.dicoding.com/certificates/81P24QM5QZOY" target="_blank"
+            rel="noopener">Dicoding
+            - Belajar Dasar Pemrograman Web ↗</a>
+        </div>
+      </div>
+
+      <div class="cred-group">
+        <p class="cred-group-title">seminars &amp; events</p>
+        <div class="cred-list">
+          <div class="cred-row">
+            <a class="cred-item" href="https://drive.google.com/file/d/1d3LTJ0Ls0-RDbBe6QxMLMQJ_CylCgccf/view"
+              target="_blank" rel="noopener">Seminar Stress Management In Career Development
+              ↗</a>
+            <span class="exp-period">2025</span>
+          </div>
+          <div class="cred-row">
+            <a class="cred-item" href="https://drive.google.com/file/d/1Pr0PYkW2M-iqZsFpYxn_uADi9Ptk3dYX/view"
+              target="_blank" rel="noopener">Seminar Kewirausahaan: AI-Preneurship, Skill Mendapatkan Income di Era AI
+              ↗</a>
+            <span class="exp-period">2025</span>
+          </div>
+          <div class="cred-row">
+            <a class="cred-item" href="https://drive.google.com/file/d/1NemfBnpLY6i1oirN6ubD6o6PkIxPuehl/view"
+              target="_blank" rel="noopener">Data Analyst – Workshop Magang Online Academy
+              ↗</a>
+            <span class="exp-period">2024</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ── FOOTER ────────────────────────────────────────── -->
+    <footer class="footer">
+      <!-- TODO: replace with actual email -->
+      <a class="footer-email" href="mailto:your@email.com" aria-label="Email">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block">
+          <!-- petals -->
+          <ellipse cx="12" cy="5.5" rx="2" ry="3.5" fill="currentColor" opacity=".55"/>
+          <ellipse cx="12" cy="18.5" rx="2" ry="3.5" fill="currentColor" opacity=".55"/>
+          <ellipse cx="5.5" cy="12" rx="3.5" ry="2" fill="currentColor" opacity=".55"/>
+          <ellipse cx="18.5" cy="12" rx="3.5" ry="2" fill="currentColor" opacity=".55"/>
+          <ellipse cx="7.1" cy="7.1" rx="2" ry="3.5" transform="rotate(-45 7.1 7.1)" fill="currentColor" opacity=".4"/>
+          <ellipse cx="16.9" cy="7.1" rx="2" ry="3.5" transform="rotate(45 16.9 7.1)" fill="currentColor" opacity=".4"/>
+          <ellipse cx="7.1" cy="16.9" rx="2" ry="3.5" transform="rotate(45 7.1 16.9)" fill="currentColor" opacity=".4"/>
+          <ellipse cx="16.9" cy="16.9" rx="2" ry="3.5" transform="rotate(-45 16.9 16.9)" fill="currentColor" opacity=".4"/>
+          <!-- centre -->
+          <circle cx="12" cy="12" r="3.6" fill="currentColor"/>
+        </svg>
+      </a>
+      <span class="footer-location">Yogyakarta, Indonesia · 2026</span>
+      </footer>
+
+  </div><!-- /container -->
+
+  <script src="chart.js"></script>
+  <script>initChart();</script>
+  <script src="main.js"></script>
+</body>
+</html>

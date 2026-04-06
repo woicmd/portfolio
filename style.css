@@ -149,6 +149,14 @@ hr {
   font-size: 15px;
   color: var(--text-secondary);
   line-height: 1.65;
+  margin-bottom: 0.6rem;
+}
+
+.hero-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  line-height: 1.7;
   margin-bottom: 1.5rem;
 }
 

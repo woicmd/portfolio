@@ -739,8 +739,20 @@ a.cred-item:hover {
   color: var(--text-tertiary);
 }
 
+.footer-logo {
+  display: block;
+  width: 18px;
+  height: 18px;
+  opacity: 0.75;
+  transition: opacity .2s ease;
+}
+
 .footer-email:hover {
   color: var(--text-secondary);
+}
+
+.footer-email:hover .footer-logo {
+  opacity: 1;
 }
 
 .footer-location {

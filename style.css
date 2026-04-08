@@ -10,7 +10,6 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --bull: #1D9E75;
-  --bear: #D85A30;
   --amber: #EF9F27;
   --amber-bg: #FAEEDA;
   --amber-text: #854F0B;
@@ -659,11 +658,6 @@ hr {
   margin-top: 2px;
 }
 
-.research-meta .exp-period {
-  margin-left: auto;
-  margin-top: 0;
-}
-
 /* ── CREDENTIALS ─────────────────────────────────────────── */
 .cred-group {
   margin-bottom: 1.25rem;
@@ -698,29 +692,6 @@ hr {
 
 a.cred-item:hover {
   background: var(--bg-secondary);
-}
-
-.cred-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.cred-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 12px;
-  align-items: center;
-  padding: 6px 0;
-  border-bottom: 0.5px solid var(--border);
-}
-
-.cred-row:last-child {
-  border-bottom: none;
-}
-
-.cred-row .cred-item {
-  border: none;
-  padding: 0;
 }
 
 /* ── FOOTER ──────────────────────────────────────────────── */

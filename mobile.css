@@ -64,18 +64,6 @@
   display: block;
 }
 
-.nav-overlay-badge {
-  display: inline-block;
-  margin-top: 24px;
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
-  color: var(--green-text);
-  background: var(--green-bg);
-  border: 0.5px solid var(--green-border);
-  padding: 4px 12px;
-  border-radius: var(--radius-md);
-}
-
 /* ── ABSTRACT TOGGLE ── */
 .abstract-wrap {
   position: relative;

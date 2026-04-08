@@ -5,19 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mrh.</title>
-  <!-- Prevent Search Engines from indexing this CV -->
   <meta name="robots" content="noindex, nofollow">
-  <!-- Open Graph for nice display when sharing link via Whatsapp/LinkedIn DM -->
   <meta property="og:title" content="Muhammad Ridhwan Hakiki — Data Scientist">
   <meta property="og:description"
     content="Recent graduate with hands-on project experience spanning data science research, RESTful API development, and Google Cloud infrastructure.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mrh.works">
+  <meta property="og:image" content="https://mrh.works/assets/me.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap"
     rel="stylesheet">
-  <link rel="icon" type="image/webp" href="assets/me.png">
+  <link rel="icon" type="image/png" href="assets/me.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mobile.css">
 </head>
@@ -29,6 +29,7 @@
     <nav class="nav">
       <span class="nav-brand">mrh.</span>
       <a class="nav-link" href="#research">research</a>
+      <a class="nav-link" href="#skills">skills</a>
       <a class="nav-link" href="#projects">projects</a>
       <a class="nav-link" href="#experience">experience</a>
       <a class="nav-link" href="#credentials">credentials</a>
@@ -46,6 +47,7 @@
           <button class="nav-close" id="navClose" aria-label="Close menu">✕</button>
         </div>
         <a class="nav-overlay-link" href="#research">research</a>
+        <a class="nav-overlay-link" href="#skills">skills</a>
         <a class="nav-overlay-link" href="#projects">projects</a>
         <a class="nav-overlay-link" href="#experience">experience</a>
         <a class="nav-overlay-link" href="#credentials">credentials</a>
@@ -61,7 +63,7 @@
         RESTful API development, and Google Cloud infrastructure. Actively seeking early-career
         opportunities to grow and contribute to impactful tech teams.
       </p>
-      <p class="hero-meta">B.S. Informatics · Universitas Amikom Yogyakarta<br>GPA 3.82 · 2026</p>
+      <p class="hero-meta">Informatics (S.Kom) · Universitas Amikom Yogyakarta<br>GPA 3.82 · 2026</p>
       <div class="btn-group">
         <a class="btn btn-primary" href="#research"><svg class="btn-icon" viewBox="0 0 16 16" fill="none"
             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -81,11 +83,10 @@
             <path
               d="M14.82 0H1.18A1.16 1.16 0 000 1.15v13.7A1.16 1.16 0 001.18 16h13.64A1.16 1.16 0 0016 14.85V1.15A1.16 1.16 0 0014.82 0zM4.74 13.68H2.46V6h2.28v7.68zm-1.14-8.73A1.32 1.32 0 114.92 3.6a1.32 1.32 0 01-2.64 1.35zm9.93 8.73h-2.28V9.93c0-.89-.02-2.04-1.24-2.04-1.25 0-1.44.98-1.44 1.98v3.8H6.28V6h2.19v1.05h.03c.3-.58 1.05-1.19 2.17-1.19 2.32 0 2.75 1.53 2.75 3.51v4.31z" />
           </svg>LinkedIn</a>
-        <!-- CV Temporarily Locked -->
         <span class="btn btn--private">
           <svg class="btn-icon" viewBox="0 0 16 16" fill="currentColor">
             <path d="M4 5V4a4 4 0 118 0v1h1a1 1 0 011 1v8a1 1 0 01-1 1H3a1 1 0 01-1-1V6a1 1 0 011-1h1zm2-1v1h4V4a2 2 0 10-4 0zm2 8a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-          </svg>Open CV
+          </svg>CV PDF
         </span>
       </div>
     </section>
@@ -143,7 +144,6 @@
       <div class="metrics-row">
         <div class="metric">
           <p class="metric-label">actual range</p>
-          <!-- actual low 83,954 → actual high 95,924 -->
           <p class="metric-value">$11.97K</p>
           <p class="metric-sub">83.95K → 95.92K</p>
         </div>
@@ -177,7 +177,6 @@
         <div class="status-dot"></div>
         <div class="loa-content">
           <span class="loa-text">Production.</span>
-          <!-- Replace with actual LoA link -->
           <a class="loa-link" href="https://drive.google.com/file/d/1-eo6FQ-iFSSSMNI6TeD_H4ifrWHzA24R/view"
             target="_blank" rel="noopener">View LoA →</a>
         </div>
@@ -278,7 +277,6 @@
             <span class="tech-tag">React</span>
           </div>
           <div class="card-links">
-            <!-- Replace href with actual links -->
             <a class="card-link" href="https://github.com/GithubHakiki/punkjoki.git"><svg class="icon-gh"
                 viewBox="0 0 16 16" fill="currentColor">
                 <path
@@ -335,33 +333,6 @@
       <div class="projects-dots" id="projectsDots"></div>
     </section>
 
-    <script>
-      (function () {
-        const grid = document.getElementById('projectsGrid');
-        const left = document.getElementById('projLeft');
-        const right = document.getElementById('projRight');
-        if (!grid || !left || !right) return;
-
-        function getCardWidth() {
-          const card = grid.querySelector('.project-card');
-          return card ? card.offsetWidth + 10 : 300;
-        }
-
-        function updateArrows() {
-          left.style.opacity = grid.scrollLeft <= 5 ? '0.25' : '1';
-          left.style.pointerEvents = grid.scrollLeft <= 5 ? 'none' : 'auto';
-          const atEnd = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 5;
-          right.style.opacity = atEnd ? '0.25' : '1';
-          right.style.pointerEvents = atEnd ? 'none' : 'auto';
-        }
-
-        left.addEventListener('click', () => grid.scrollBy({ left: -getCardWidth(), behavior: 'smooth' }));
-        right.addEventListener('click', () => grid.scrollBy({ left: getCardWidth(), behavior: 'smooth' }));
-        grid.addEventListener('scroll', updateArrows);
-        updateArrows();
-      })();
-    </script>
-
     <hr class="divider">
 
     <!-- ── EXPERIENCE ────────────────────────────────────── -->
@@ -414,7 +385,6 @@
       <div class="cred-group">
         <p class="cred-group-title">cloud &amp; networking</p>
         <div class="cred-items">
-          <!-- Replace href with actual certificate links -->
           <a class="cred-item" href="https://www.credly.com/badges/c3af93ea-fddc-40f6-a88c-1b75a75b66f7" target="_blank"
             rel="noopener">Google Cloud Computing Foundations Certificate ↗</a>
           <a class="cred-item" href="https://www.credly.com/badges/85012b7c-2144-4a0c-b48a-868e9f80415b" target="_blank"
@@ -446,8 +416,7 @@
           <a class="cred-item" href="https://drive.google.com/file/d/1a6iLVQubWqJLFucpZQ5xJsLrdh59n19l/view"
             target="_blank" rel="noopener">Code Generations and Optimization ↗</a>
           <a class="cred-item" href="https://drive.google.com/file/d/1zjGp-eeYvOMoFA-M0j_6fF1sACKmGwfW/view"
-            target="_blank" rel="noopener">LLM-Based Tools and Gemini API Integration for Data Scientists
-            ↗</a>
+            target="_blank" rel="noopener">LLM-Based Tools and Gemini API Integration for Data Scientists ↗</a>
           <a class="cred-item" href="https://drive.google.com/file/d/1d3LTJ0Ls0-RDbBe6QxMLMQJ_CylCgccf/view"
             target="_blank" rel="noopener">Stress Management In Career Development ↗</a>
           <a class="cred-item" href="https://drive.google.com/file/d/1Pr0PYkW2M-iqZsFpYxn_uADi9Ptk3dYX/view"
@@ -462,7 +431,6 @@
 
     <!-- ── FOOTER ────────────────────────────────────────── -->
     <footer class="footer">
-      <!-- TODO: replace with actual email -->
       <a class="footer-email" href="#" aria-label="Email">
         <img class="footer-logo" src="assets/me.png" alt="Logo" width="18" height="18">
       </a>

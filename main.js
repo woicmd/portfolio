@@ -1,5 +1,32 @@
 (function () {
 
+  /* ── THEME TOGGLE ────────────────────────────────────── */
+  const themeToggle = document.getElementById('themeToggle');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (typeof draw === 'function') draw();
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || getSystemTheme();
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+
+  /* sync jika user mengubah system preference dan belum ada manual override */
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (!localStorage.getItem('theme')) {
+      if (typeof draw === 'function') draw();
+    }
+  });
+
   /* ── HAMBURGER MENU ──────────────────────────────────── */
   const hamburger = document.getElementById('navHamburger');
   const overlay   = document.getElementById('navOverlay');
